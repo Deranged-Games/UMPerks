@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dondelium>
+  <append xpath="/buffs">
+    <buff name="buffUtilityMurdersCompleteKill" name_key="Tool Vampire" description_key="You feel reinvigorated!" tooltip_key="Tool Vampire" icon="ui_game_symbol_medical">
+      <stack_type value="ignore"/>
+      <duration value="3"/>
+      <effect_group>
+        <passive_effect name="HealthChangeOT" operation="base_add" value="1"/>
+        <passive_effect name="FoodLossPerHealthPointLost" operation="perc_add" value="-0.5"/>
+      </effect_group>
+    </buff>
+  </append>
+</dondelium>

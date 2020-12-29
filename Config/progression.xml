@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dondelium>
+	<append xpath="/progression/skills">
+	  <skill name="skillUtilityMurders" parent="attBooks" name_key="perkUtilityMurders0Name" desc_key="perkUtilityMurders0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
+  </append>
+
+  <append xpath="/progression/perks">
+    <perk name="perkUtilityMurdersHammer" parent="skillUtilityMurders" max_level="1" base_skill_point_cost="0" desc_key="perkUtilityMurdersHammerDesc" long_desc_key="perkUtilityMurdersHammerLongDesc">
+      <effect_group>
+        <requirement name="ItemHasTags" tags="hammer"/>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1" value=".5"/> <!-- Bleed would go better on almost everything else, but it plays really nice here. -->
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="2">
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="5" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+      </effect_group>
+    </perk>
+    <perk name="perkUtilityMurdersAxe" parent="skillUtilityMurders" max_level="1" base_skill_point_cost="0" desc_key="perkUtilityMurdersAxeDesc" long_desc_key="perkUtilityMurdersAxeLongDesc">
+      <effect_group>
+        <requirement name="ItemHasTags" tags="axe"/>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1" value=".5"/>
+        <passive_effect name="DismemberChance" operation="perc_add" level="1" value="2"/> <!-- bye bye arm! Needs more testing at entry, and full spec'd  -->
+      </effect_group>
+    </perk>
+    <perk name="perkUtilityMurdersPickaxe" parent="skillUtilityMurders" max_level="1" base_skill_point_cost="0" desc_key="perkUtilityMurdersPickaxeDesc" long_desc_key="perkUtilityMurdersPickaxeLongDesc">
+      <effect_group>
+        <requirement name="ItemHasTags" tags="pickaxe"/>
+        <passive_effect name="DamageModifier" operation="perc_add" level="1" value="2" tags="head"/> <!-- Was 3x, but made it so I prefered it over the sledge hammer... -->
+      </effect_group>
+    </perk>
+    <perk name="perkUtilityMurdersShovel" parent="skillUtilityMurders" max_level="1" base_skill_point_cost="0" desc_key="perkUtilityMurdersShovelDesc" long_desc_key="perkUtilityMurdersShovelLongDesc">
+      <effect_group>
+        <requirement name="ItemHasTags" tags="shovel"/>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1" value="1"/>
+        <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned01"/> <!-- Sounds good, in actuality, needs something more -->
+      </effect_group>
+    </perk>
+    <perk name="perkUtilityMurdersAuger" parent="skillUtilityMurders" max_level="1" base_skill_point_cost="0" desc_key="perkUtilityMurdersAugerDesc" long_desc_key="perkUtilityMurdersAugerLongDesc">
+      <effect_group>
+        <requirement name="ItemHasTags" tags="auger"/>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1" value=".5"/>
+        <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffInjuryCrippled01"/> <!-- This really just pauses a zombie temporarily -->
+        <passive_effect name="DismemberChance" operation="base_add" level="1" value="0.25"/>
+      </effect_group>
+    </perk>
+    <perk name="perkUtilityMurdersChainsaw" parent="skillUtilityMurders" max_level="1" base_skill_point_cost="0" desc_key="perkUtilityMurdersChainsawDesc" long_desc_key="perkUtilityMurdersChainsawLongDesc">
+      <effect_group>
+        <requirement name="ItemHasTags" tags="chainsaw"/>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1" value="1.5"/> <!-- DOOOOOoooooooooommmmmm! -->
+      </effect_group>
+    </perk>
+    <perk name="perkUtilityMurdersComplete" parent="skillUtilityMurders" max_level="1" base_skill_point_cost="0" desc_key="perkUtilityMurdersCompleteDesc" long_desc_key="perkUtilityMurdersCompleteLongDesc">
+      <effect_group>
+        <triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="5"> <!-- This is absurd, and the devs would never do it, but I think its kind of hilarious -->
+          <requirement name="ProgressionLevel" progression_name="perkUtilityMurdersComplete" operation="Equals" value="1"/>
+          <requirement name="ItemHasTags" tags="tool"/>
+        </triggered_effect>
+      </effect_group>
+    </perk>
+  </append>
+</dondelium>

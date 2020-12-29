@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dondelium>
+  <append xpath="/items">
+    <item name="bookUtilityMurdersHammer"> <!-- first book -->
+      <property name="Extends" value="bookFiremansAlmanacHeat"/>
+      <property name="DescriptionKey" value="perkUtilityMurdersHammerLongDesc"/>
+      <property name="CustomIcon" value="bookFiremansAlmanacHeat"/>
+      <property name="CustomIconTint" value="60ff60"/>
+      <property name="Unlocks" value="perkUtilityMurdersHammer"/>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersHammer" level="-1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersComplete" level="-1">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+      </effect_group>
+    </item>
+    <item name="bookUtilityMurdersAxe">
+      <property name="Extends" value="bookUtilityMurdersHammer"/>
+      <property name="DescriptionKey" value="perkUtilityMurdersAxeLongDesc"/>
+      <property name="Unlocks" value="perkUtilityMurdersAxe"/>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersAxe" level="-1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersComplete" level="-1">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+      </effect_group>
+    </item>
+    <item name="bookUtilityMurdersPickaxe">
+      <property name="Extends" value="bookUtilityMurdersHammer"/>
+      <property name="DescriptionKey" value="perkUtilityMurdersPickaxeLongDesc"/>
+      <property name="Unlocks" value="perkUtilityMurdersPickaxe"/>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersPickaxe" level="-1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersComplete" level="-1">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+      </effect_group>
+    </item>
+    <item name="bookUtilityMurdersShovel">
+      <property name="Extends" value="bookUtilityMurdersHammer"/>
+      <property name="DescriptionKey" value="perkUtilityMurdersShovelLongDesc"/>
+      <property name="Unlocks" value="perkUtilityMurdersShovel"/>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersShovel" level="-1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersComplete" level="-1">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+      </effect_group>
+    </item>
+    <item name="bookUtilityMurdersAuger">
+      <property name="Extends" value="bookUtilityMurdersHammer"/>
+      <property name="DescriptionKey" value="perkUtilityMurdersAugerLongDesc"/>
+      <property name="Unlocks" value="perkUtilityMurdersAuger"/>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersAuger" level="-1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersComplete" level="-1">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+      </effect_group>
+    </item>
+    <item name="bookUtilityMurdersChainsaw">
+      <property name="Extends" value="bookUtilityMurdersHammer"/>
+      <property name="DescriptionKey" value="perkUtilityMurdersChainsawLongDesc"/>
+      <property name="Unlocks" value="perkUtilityMurdersChainsaw"/>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersChainsaw" level="-1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUtilityMurdersComplete" level="-1">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+          <requirement name="PerksUnlocked" skill_name="skillUtilityMurders" operation="GTE" value="6"/></triggered_effect>
+      </effect_group>
+    </item>
+  </append>
+
+  <append xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@name='Tags']/@value">,hammer</append>
+  <append xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='Tags']/@value">,axe</append>
+  <append xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='Tags']/@value">,pickaxe</append>
+  <append xpath="/items/item[@name='meleeToolPickT3Auger']/property[@name='Tags']/@value">,auger</append>
+</dondelium>

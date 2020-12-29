@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dondelium>
+	<append xpath="/lootcontainers/lootgroup[@name='perkBooks']">
+    <item name="bookUtilityMurdersHammer"/>
+    <item name="bookUtilityMurdersAxe"/>
+    <item name="bookUtilityMurdersPickaxe"/>
+    <item name="bookUtilityMurdersShovel"/>
+    <item name="bookUtilityMurdersAuger"/>
+    <item name="bookUtilityMurdersChainsaw"/>
+  </append>
+</dondelium>
